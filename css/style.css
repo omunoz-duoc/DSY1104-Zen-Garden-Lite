@@ -1,3 +1,7 @@
+@import url(../assets/Pricedown.otf);
+
+
+
 /*
   Zen Garden Lite — CSS starter
   Reglas del juego:
@@ -10,10 +14,10 @@
    1) Variables de tema
    ===================== */
 :root {
-  --bg: #0e0f12;
-  --surface: #151821;
-  --text: #e7e9ee;
-  --muted: #a6adbb;
+  --bg: #023047;
+  --surface: #fb8500;
+  --text: #ffffff;
+  --muted: #ffb703;
   --primary: #5cc8ff;
   --accent: #ffba4a;
 
@@ -36,7 +40,7 @@
 html, body { margin: 0; padding: 0; }
 
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+  font-family: "Pricedown", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
   line-height: 1.6;
   background: var(--bg);
   color: var(--text);
@@ -138,9 +142,16 @@ section { padding-block: var(--space-4); }
 #destacados {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2,1fr);
   gap: var(--space-3);
 }
+
+#destacados h2{
+  grid-column: span 3 / span 3;
+}
+
 #destacados article {
+  grid-row-start: 2;
   background: var(--surface);
   padding: var(--space-3);
   border-radius: var(--radius);
